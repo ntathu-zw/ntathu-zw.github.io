@@ -1,0 +1,16 @@
+/* Main Styles - Core variables and base styles */
+/* Refactored from monolithic styles.css for better maintainability */
+
+@import url('./styles/variables.css');
+@import url('./styles/base.css');
+@import url('./styles/components.css');
+@import url('./styles/layout.css');
+@import url('./styles/sections.css');
+@import url('./styles/responsive.css');
+
+/* Tombstone: removed all variable definitions - moved to variables.css */
+/* Tombstone: removed all base styles and resets - moved to base.css */
+/* Tombstone: removed all component styles - moved to components.css */
+/* Tombstone: removed all layout styles - moved to layout.css */
+/* Tombstone: removed all section-specific styles - moved to sections.css */
+/* Tombstone: removed all responsive styles - moved to responsive.css */
