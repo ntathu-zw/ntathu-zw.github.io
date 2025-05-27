@@ -242,8 +242,17 @@ class ModalSystem {
         const formData = new FormData(e.target);
         const data = Object.fromEntries(formData);
         
-        // Simulate form submission
-        console.log('Form submitted:', data);
+        // Create email content based on form type
+        let subject = 'New Contact Form Submission - ntathu.net';
+        let body = 'New form submission:\n\n';
+        
+        Object.entries(data).forEach(([key, value]) => {
+            body += `${key.replace('_', ' ').toUpperCase()}: ${value}\n`;
+        });
+        
+        // Send email to info@ntathu.net
+        const mailtoLink = `mailto:info@ntathu.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.open(mailtoLink);
         
         // Show success message
         this.showSuccessMessage();

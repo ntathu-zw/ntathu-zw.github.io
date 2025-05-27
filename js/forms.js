@@ -22,6 +22,14 @@ function initializeForms() {
             
             // Simple form validation
             if (name && email && service && message) {
+                // Send email to info@ntathu.net
+                const subject = encodeURIComponent('Contact Form Submission - ntathu.net');
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nService: ${service}\nMessage: ${message}`);
+                const mailtoLink = `mailto:info@ntathu.net?subject=${subject}&body=${body}`;
+                
+                // Open default email client
+                window.open(mailtoLink);
+                
                 // Simulate form submission
                 showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
                 contactForm.reset();
